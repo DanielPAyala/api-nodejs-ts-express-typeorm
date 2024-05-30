@@ -26,7 +26,7 @@ class CursosController {
 
   ingresar(req: Request, res: Response) {
     try {
-      const { dni, nombre, apellido, email } = req.body;
+      const { nombre, descripcion } = req.body;
       res.send('ingresar curso')
     } catch (err) {
       if (err instanceof Error) {
@@ -38,7 +38,7 @@ class CursosController {
   actualizar(req: Request, res: Response) {
     const { id } = req.params;
     try {
-      const { dni, nombre, apellido, email } = req.body;
+      const { nombre, descripcion } = req.body;
       res.send('actualizar curso')
     } catch (err) {
       if (err instanceof Error) {

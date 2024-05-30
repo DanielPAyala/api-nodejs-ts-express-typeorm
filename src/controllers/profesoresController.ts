@@ -28,7 +28,7 @@ class ProfesoresController {
 
   ingresar(req: Request, res: Response) {
     try {
-      const { dni, nombre, apellido, email } = req.body;
+      const { dni, nombre, apellido, email, profesion, telefono } = req.body;
       res.send('ingresar profesor')
     } catch (err) {
       if (err instanceof Error) {
@@ -40,7 +40,7 @@ class ProfesoresController {
   actualizar(req: Request, res: Response) {
     const { id } = req.params;
     try {
-      const { dni, nombre, apellido, email } = req.body;
+      const { dni, nombre, apellido, email, profesion, telefono } = req.body;
       res.send('actualizar profesor')
     } catch (err) {
       if (err instanceof Error) {
